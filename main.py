@@ -11,7 +11,8 @@ class SkillHandler(BaseHTTPRequestHandler):
                 body = self.rfile.read(content_length)
                 parsed = json.loads(body)
                 if parsed['request']['intent']['name'] == 'plant_tree':
-                    speech = plant_trees(parsed['request']['intent']['slots']['number']['value'])
+                    number = parsed['request']['intent']['slots']['number'].get('value', None)
+                    speech = plant_trees(number)
             except Exception as e:
                 print(e)
         
