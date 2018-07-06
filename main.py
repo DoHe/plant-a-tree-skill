@@ -41,8 +41,8 @@ def plant_trees(number):
     if number is None:
         return {
             "type": "PlainText",
-            "text": "I'll just do ahead and assume you want to plant just a single tree (which I now did). Thank you for saving the world!",
-            "ssml": "<speak><p>I'll just do ahead and assume you want to plant just a single tree (which I now did).</p><p>Thank you for saving the world!</p></speak>"
+            "text": "I'll just go ahead and assume you want to plant just a single tree (which I now did). Thank you for saving the world!",
+            "ssml": "<speak><p>I'll just do ahead and assume you want to plant just a <emphasis level=\"moderate\">single</emphasis> tree <break strength=\"weak\"/> (which I now did).</p><p>Thank you for saving the world!</p></speak>"
         }
     if int(number) <= 0:
         return {
