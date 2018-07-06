@@ -19,4 +19,9 @@ def main(port):
     httpd.serve_forever()
 
 if __name__ == '__main__':
-    main(8765)
+    import sys
+
+    port = 8765
+    if len(sys.argv) > 1:
+        port = int(sys.argv[1])
+    main(port)
