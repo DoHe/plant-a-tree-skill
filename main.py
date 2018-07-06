@@ -43,7 +43,7 @@ def plant_trees(number):
             "text": "I'll just do ahead and assume you want to plant just a single tree (which I now did). Thank you for saving the world!",
             "ssml": "<speak><p>I'll just do ahead and assume you want to plant just a single tree (which I now did).</p><p>Thank you for saving the world!</p></speak>"
         }
-    if number <= 0:
+    if int(number) <= 0:
         return {
             "type": "PlainText",
             "text": "You really have to plant more than 0 tress to save the world...",
